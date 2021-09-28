@@ -37,18 +37,8 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: '[name].[ext]?[hash]',
-              publicPath: './dist/',
-              limit: 8192,
-            },
-          },
-        ],
-        exclude: /node_modules/,
+        test: /\.(png|jpe?g|gif|svg|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
