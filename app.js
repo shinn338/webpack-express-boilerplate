@@ -26,8 +26,4 @@ app.use(
 // Model 계층 구현 부분
 app.use(express.static(path.join(__dirname, 'model')));
 
-app.listen(process.env.port || 3000, () => {
-  console.log('server on');
-});
-
 module.exports = app;
